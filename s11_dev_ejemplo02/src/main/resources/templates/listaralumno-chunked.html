@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">CJava Reactivo</title>
+</head>
+<body>
+<h1 th:text="${titulo}"></h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>nombre</th>
+        <th>creditos</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="alumno: ${alumnos}">
+        <td th:text="${alumno.id}"></td>
+        <td th:text="${alumno.nombre}"></td>
+        <td th:text="${alumno.apellido}"></td>
+        <td th:text="${alumno.nota}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
